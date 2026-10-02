@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+
+  --color-navy-950: #0b132b;
+  --color-navy-900: #0f2042;
+  --color-navy-800: #1b365d;
+  --color-cobalt-50: #eaf2fe;
+  --color-cobalt-100: #d4e5fd;
+  --color-cobalt-600: #1877f2;
+  --color-cobalt-700: #0f63d6;
+  --color-canvas: #f8fafc;
+  --color-line: #e2e8f0;
+
+  --shadow-card: 0 1px 3px 0 rgb(15 32 66 / 0.04), 0 1px 2px -1px rgb(15 32 66 / 0.02);
+  --shadow-card-hover: 0 10px 15px -3px rgb(15 32 66 / 0.07), 0 4px 6px -4px rgb(15 32 66 / 0.04);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+  }
+  body {
+    @apply bg-canvas text-navy-900;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-cobalt-600;
+  }
+}
+
+/* 시청 진도바 range input */
+.seek {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+.seek::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgb(24 119 242 / 0.6);
+}
+.seek::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgb(24 119 242 / 0.6);
+}
